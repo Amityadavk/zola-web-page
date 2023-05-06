@@ -1,0 +1,295 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.navbar div>img {
+    width: 150px;
+}
+
+.login-signup-button {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.login-signup-button>button {
+    border: none;
+}
+
+.login {
+    background: none;
+}
+
+.signup {
+    border-radius: 25px;
+    background-color: #32b1b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+.headline {
+    background-color: #c7315b;
+    margin-top: 5px;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.headline p {
+    margin: 0;
+}
+
+.poster {
+    display: flex;
+
+    width: 100%;
+    background-color: rgb(205, 232, 246);
+
+    margin: auto;
+
+}
+
+.poster-text {
+
+    text-align: center;
+    padding-left: 70px;
+    margin: auto;
+}
+
+.poster-image>img {
+    width: 100%;
+    height: 100%;
+}
+
+.gift {
+    display: flex;
+    max-width: 1650px;
+    margin: auto;
+
+    justify-content: space-around;
+}
+
+.gift-item {
+    text-align: center;
+    margin: 70px 0;
+
+}
+
+.gift-item img {
+    width: 100px;
+    border: 5px solid rgb(239, 241, 239);
+    border-radius: 60px;
+}
+
+.brand {
+    background-color: rgb(14, 92, 130);
+    padding: 70px 0;
+}
+
+.brand-heading {
+    text-align: center;
+    color: white;
+
+}
+
+.brand-item-all {
+    display: flex;
+
+    max-width: 1650px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.brand-item {
+    background-color: white;
+    text-align: center;
+    color: rgb(14, 92, 130);
+    margin-top: 20px;
+
+}
+
+
+.brand-signup {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.brand-signup>button {
+    padding: 20px 70px;
+    border-radius: 100px;
+}
+
+.rating-section {
+    margin: 80px 0;
+}
+
+.rating-heading {
+    text-align: center;
+}
+
+.rating-all {
+    display: flex;
+    max-width: 1450px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.rating {
+    text-align: center;
+}
+
+.couple-img {
+    border-radius: 100px;
+    width: 80px;
+}
+
+.star-img {
+    width: 100px;
+}
+
+.create-wed-web {
+    display: flex;
+    background-image: linear-gradient(to top, #c8d7ed, #d5d2ed, #e5cbe5, #f3c6d6, #f9c4c2);
+    /* background-image: linear-gradient(to top, #ebe5d9, #eee8de, #f2ece3, #f5efe8, #f8f3ed); */
+}
+
+.create-wed-web-text {
+    margin: auto;
+    
+}
+.create-wed-web-div{
+    display: contents;
+}
+/* .create-wed-web-image{
+    width: 50%;
+} */
+
+.easy-crew {
+    text-align: center;
+}
+
+.easy-crew {
+    margin: 100px 0;
+}
+
+.easy-crew-item-all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.easy-crew-item>h5 {
+    margin: 0;
+    margin: 5px 0;
+}
+
+.easy-crew-item>p {
+    margin: 0;
+    margin: 5px 0;
+}
+
+.easy-crew-item>img {
+    border: 10px solid rgb(239, 241, 239);
+    border-radius: 100px;
+    margin: 20px 0;
+}
+
+.footer-signup {
+    text-align: center;
+    background-color: rgb(14, 92, 130);
+    color: white;
+    padding: 50px 0;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-text{
+    text-align: center;
+}
+
+
+/* Responsiveness */
+
+
+/* Mobile Screen */
+
+@media screen and (min-width:100px) and (max-width:275px){
+ .navbar{
+    flex-direction: column;
+ }
+ .poster{
+    flex-direction: column;
+ }
+ .gift{
+    flex-wrap: wrap;
+ }
+ .brand-item-all{
+    flex-wrap: wrap;
+ }
+ 
+ .rating-all{
+    flex-wrap: wrap;
+ }
+ .create-wed-web-image > img{
+    width: 100%;
+}
+.create-wed-web{
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    text-align: center;
+ }
+ .easy-crew-item-all{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/* Tablet Screen */
+
+@media screen and (min-width:276px) and (max-width:750px){
+    .navbar{
+        flex-direction: column;
+     }
+     .poster{
+        flex-direction: column;
+     }
+     .gift{
+        flex-wrap: wrap;
+     }
+     .brand-item-all{
+        flex-wrap: wrap;
+     }
+     .rating-all{
+        flex-wrap: wrap;
+     }
+     .create-wed-web{
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        /* text-align: center; */
+     }
+     .create-wed-web-image > img{
+        width: 100%;
+    }
+    .easy-crew-item-all{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop screen */
+
+@media screen and (min-width:751px){
+    .brand-item-all{
+        flex-wrap: wrap;
+        
+     }
+ .create-wed-web{
+    flex-wrap: wrap;
+ }
+}

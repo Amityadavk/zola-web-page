@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Demo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div>
+            <img src="data:image/png;base64,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"
+                alt="">
+        </div>
+        <div class="login-signup-button">
+            <button class="login">LOG IN</button>
+            <button class="signup">START YOUR REGISTRY</button>
+        </div>
+
+    </div>
+    <div class="headline">
+        <p> <b>Get $25</b> lorem ipsum dolor sit amet, <b>20% OFF</b> consectetur adipisicing elit. Esse</p>
+    </div>
+
+    <div class="poster">
+        <div class="poster-text">
+
+            <h1>The Easiest <br> Wedding Registry</h1>
+            <p>Lorem ipsum cing elit. Aperiam ips <br> rem ipsum dolor sit amet consese</p>
+            <button class="signup">START YOUR REGISTRY</button>
+
+        </div>
+        <div class="poster-image">
+            <img src="https://s.hdnux.com/photos/01/26/10/31/22578805/4/1200x0.jpg" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="gift">
+        <div class="gift-item">
+            <img src="https://previews.123rf.com/images/satich/satich1311/satich131100002/23719421-green-gift-box-with-gold-ribbon-bow.jpg"
+                alt="">
+            <h3>So Easy to Use</h3>
+            <p>lorem ipsum dolor sit amet adips<br> sicing elit. Quae sint impedit <br> quo sequi, blanditiis maxime</p>
+        </div>
+        <div class="gift-item">
+            <img src="https://previews.123rf.com/images/satich/satich1311/satich131100002/23719421-green-gift-box-with-gold-ribbon-bow.jpg"
+                alt="">
+            <h3>So Easy to Use</h3>
+            <p>lorem ipsum dolor sit amet adips<br> sicing elit. Quae sint impedit <br> quo sequi, blanditiis maxime</p>
+        </div>
+        <div class="gift-item">
+            <img src="https://previews.123rf.com/images/satich/satich1311/satich131100002/23719421-green-gift-box-with-gold-ribbon-bow.jpg"
+                alt="">
+            <h3>So Easy to Use</h3>
+            <p>lorem ipsum dolor sit amet adips<br> sicing elit. Quae sint impedit <br> quo sequi, blanditiis maxime</p>
+        </div>
+        <div class="gift-item">
+            <img src="https://previews.123rf.com/images/satich/satich1311/satich131100002/23719421-green-gift-box-with-gold-ribbon-bow.jpg"
+                alt="">
+            <h3>So Easy to Use</h3>
+            <p>lorem ipsum dolor sit amet adips <br> sicing elit. Quae sint impedit <br> quo sequi, blanditiis maxime
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <div class="brand">
+
+        <div class="brand-heading">
+            <h1>Brands Everyone Will Love</h1>
+            <p style="max-width: 700px; margin: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique amet consequuntur facere illum sed
+                nihil et, eius adipisci? Placeat odit aut aliquid ducimus.
+                </p>
+        </div>
+
+
+        <div class="brand-item-all">
+            <div class="brand-item">
+                <img src="https://images.zola.com/a20765b1-4e95-4345-b4d8-025035dea247?w=250" alt="">
+                <h2>Cuisinart</h2>
+            </div>
+            <div class="brand-item">
+                <img src="https://images.zola.com/a20765b1-4e95-4345-b4d8-025035dea247?w=250" alt="">
+                <h2>Cuisinart</h2>
+            </div>
+            <div class="brand-item">
+                <img src="https://images.zola.com/a20765b1-4e95-4345-b4d8-025035dea247?w=250" alt="">
+                <h2>Cuisinart</h2>
+            </div>
+            <div class="brand-item">
+                <img src="https://images.zola.com/a20765b1-4e95-4345-b4d8-025035dea247?w=250" alt="">
+                <h2>Cuisinart</h2>
+            </div>
+        </div>
+
+        <div class="brand-signup">
+            <button class="signup">START YOUR REGISTRY</button>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="rating-section">
+        <div class="rating-heading">
+            <h1>Rated 5 Stars on Google</h1>
+            <p>Join <b>over 500,000 </b> couples who've registered at zola</p>
+        </div>
+        <div class="rating-all">
+            <div class="rating">
+                <img class="couple-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RkYeLk1LVaMD9M0mCk9D8Ivjrh-kaRXXK1UFVgxgPxlQPZRZNiq7r7at8JTlVmKXPOw&usqp=CAU"
+                    alt="">
+                <p>
+                    orem ipsum dolor sit amet consectetur,<br> adipisicing elit. Nostrum, exercs
+                </p>
+                <img class="star-img"
+                    src="https://media.istockphoto.com/id/1140391316/vector/five-yellow-stars-customer-product-rating-icon-fow-web-applications-and-websites.jpg?s=612x612&w=0&k=20&c=K_VInFNDXNAQ-BIkog1Joaxa1kfq1sbnHfC2gqh3Vb0="
+                    alt="">
+                <h5>CAROLYN & NAT <br> Dallas, TX</h5>
+            </div>
+            <div class="rating">
+                <img class="couple-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4d0QrffwafrnP9KQP7pOu6vGXQqdvy0j_-A&usqp=CAU"
+                    alt="">
+                <p>
+                    orem ipsum dolor sit amet consectetur,<br> adipisicing elit. Nostrum, exercs
+                </p>
+                <img class="star-img"
+                    src="https://media.istockphoto.com/id/1140391316/vector/five-yellow-stars-customer-product-rating-icon-fow-web-applications-and-websites.jpg?s=612x612&w=0&k=20&c=K_VInFNDXNAQ-BIkog1Joaxa1kfq1sbnHfC2gqh3Vb0="
+                    alt="">
+                <h5>CAROLYN & NAT <br> Dallas, TX</h5>
+            </div>
+            <div class="rating">
+                <img class="couple-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RkYeLk1LVaMD9M0mCk9D8Ivjrh-kaRXXK1UFVgxgPxlQPZRZNiq7r7at8JTlVmKXPOw&usqp=CAU"
+                    alt="">
+                <p>
+                    orem ipsum dolor sit amet consectetur,<br> adipisicing elit. Nostrum, exercs
+                </p>
+                <img class="star-img"
+                    src="https://media.istockphoto.com/id/1140391316/vector/five-yellow-stars-customer-product-rating-icon-fow-web-applications-and-websites.jpg?s=612x612&w=0&k=20&c=K_VInFNDXNAQ-BIkog1Joaxa1kfq1sbnHfC2gqh3Vb0="
+                    alt="">
+                <h5>CAROLYN & NAT <br> Dallas, TX</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="create-wed-web">
+        <div class="create-wed-web-div">
+            <div class="create-wed-web-image">
+                <!-- <img src="https://images.ctfassets.net/77l22z9el0aa/1NxR4upkml5Ao7UAFGEyPJ/98afb5528f12136e3a11015a988f050f/Zola_Inline_1080x720.jpg"
+                    alt=""> -->
+                    <img src="https://images.ctfassets.net/77l22z9el0aa/2C4ipaW0Zc4U1VbuH7Y3zv/8a2a008bc80c3186ceff9b89a12d25c8/Hero_Zola.jpg?w=635&fm=webp" alt="">
+    
+            </div>
+            <div class="create-wed-web-text">
+                <h1>Create a <u style="color: red;">Free</u> <br>Wedding Website, Too </h1>
+                <p>Choose ipsum dolor sit amet consectetur <br> pisicing elit. Ratione iusto sint cumque <br> dicta, autem
+                    odit doloribus eos numquam<br> eleniti animi et omnis, haru </p>
+                <button class="signup">GET STARTED</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="easy-crew">
+        <div class="easy-crew-heading">
+            <h1>Make It Easy For Your Whole Crew</h1>
+        </div>
+        <div class="easy-crew-item-all">
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIIAggMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcBAwUEAv/EADkQAAICAQIDBAQNBAMAAAAAAAABAgMEBREGEiExQVFhExShwRUiIzJCUnFygZGx0eFVYpPwM0OS/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EACIRAAICAgICAwEBAAAAAAAAAAABAgMEERIxEyEFMkEiUf/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+W0twDO43RCuLeJ7KZvC023lnF/K2x7V5L3kY+G9V/qGR/7K88mMXoo251cJcdbLc3G5Ufw3qv8AUMn/ACM7OhazqWLkxtzMidtEukq5vdrzT7mRvNrT9ivNjZLSTLEBrx7oX1RsqkpQkt00bC2nv2i8AAegAAAAAAAAAAAAEU4y196fD1PEe2VYvjTX/XF+8lZCeOdDstslqmMnLlildBduy+kveRXOXB8SvlOaqfDshHe2+rfeEnKXLGLlJ9El3sb9N+4nPB3DnouTUc+Hyj601tfNX1n5mdXW7HpGHTTK6WkR6Ol26fKPrdXJc4qSXgv3NxPtX02vUMf0bSjYusJ7djILkUWY10qbouM49Gipm48q5b/DX8CqWkdPQNXlgWqm5t4831/tfiS3Azas2Nk6G3CE3Dm7m14eRXZN+Fq/R6TW++blL2/wWfjr5yfB9E1Um/R2AAbBOAAAAAAAAADDewZH+KL8vGqjOrK9HXN8qhGO0vzIrrPHByZ43pbOtl6ji4a3yLoQ8Fvu3+Bo07VcfVJXV0xa5PrLtRA5Nybcm232t9579By/U9Sqk3tCb5JfY/52M2HyMpWJa0iFW7evw71XCGm16l64lJrm5lQ/mJ/73EgUREyasYqPRJGEY/VGGRfWtJ1LOynco0uKW0IqXVLzJSY2I7qY2x4yPZRUlplf26NqNXzsSb+7s/0JrpdTo0/HrktpRrimvPbqfOqajjaZj+ny58kN0ui3bfgiOZPHeLHf1XDusfjNqK95XpoqxpNp9kLsqpf9MmG5kjfDnE8dXvnRbQqbYx5opS3UkSQuRkpLaJa7I2LlF+gADo7AAAAAAMS7CG8W5XpdQjQn0pj1+1/xsTGx7RbKtt1KOVlWzv3rtlNtqRn/ACMn4uK/SC+xRWn+m07egaPVqNN1l7nGKajFxe3Xv9xw116x6ryJ/ouMsTTaK2vjOPNL7X1M/Bo8ln9L0jmpcme2iDrrjCUnNxSXM+82GEZPoEtFkAwY36gHC42wnmaFa4pudDVq28u32NlYl03QjZXKE1vGS2a8ins/GlhZ1+LJNOqbj9q7n+RRy49SMj5Kv2pm7RM34P1bGyW9oxntL7r6P9S3k9yk3t2MtfhnKlmaHh32b87hs2+/Z7b+w9xJdxOvjbO4HWAQLpqgAAAAAGGt0VzxxpPqed67TH5HIfxkuyM9vf8AuWOzw6tp8NSwLsW1dJx6P6r7mRWw5x0QZNKtrcf0qKuc63vXJxfkztYvFmsY/bkRuXhZBP8ATY5GVRZiZNmPeuWyuXLJGozE5Qfr0YKssrek9EyxePLVssrBjLxdU/c/3JZpGqU6rhxycdNRbacZLqmu4qF+ZavDWD6homPS47WOPPP7z6/wXMe2c976NLBvtsk1J+kbta1OOnYzl0ds+lcfF+P2HAwOJJYuJyXVTut5pPmctl1Zz9Zsyrc+x5sXCa6Rh3Jd2x4TOyM2zyvj60Wp2Pkdy/ijNs/4q6qvwcn7SKa1ZbfmenufNOa6vbbfb/Ue88WqJeijLp0e3sIIX2TmuT2VMpynWa9I0+zVNQqxK90pv48l9GK7WW3Rj149MKqly1wSjGK7kiO8E6R6jp/rNsfl8hJ9e2Me5e8k5uY9fCO32yfDo8cNvtgAFgugAAAAAAPsAAPBm6RgZz5svFqslttzOPX8zj5PBWlW7un01Mv7Z7r2knBw64vtEcqa5/ZELo4Gqqy4WW5krKIvd1+j2b8m9/cTFJJbI+wIQjDo8rphX9Fo8Wo6dj6hS6749foyXbFkSs0LIr1CvFnJKFjahbtunst/wZOj5cUyC/Erte32dSgpEdo4Voj1uybJ+Kikj3VcP6ZBxbxYzceqdjcv1OqjJ3DGqh1E94R/w+Uklsuw+gCc6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIIAggMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcBAwUEAv/EADkQAAICAQIDBAQNBAMAAAAAAAABAgMEBREGEiExQVFhExShwRUiIzJCUnFygZGx0eFVYpPwM0OS/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EACIRAAICAgICAwEBAAAAAAAAAAABAgMEERIxEyEFMkEiUf/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+W0twDO43RCuLeJ7KZvC023lnF/K2x7V5L3kY+G9V/qGR/7K88mMXoo251cJcdbLc3G5Ufw3qv8AUMn/ACM7OhazqWLkxtzMidtEukq5vdrzT7mRvNrT9ivNjZLSTLEBrx7oX1RsqkpQkt00bC2nv2i8AAegAAAAAAAAAAAAEU4y196fD1PEe2VYvjTX/XF+8lZCeOdDstslqmMnLlildBduy+kveRXOXB8SvlOaqfDshHe2+rfeEnKXLGLlJ9El3sb9N+4nPB3DnouTUc+Hyj601tfNX1n5mdXW7HpGHTTK6WkR6Ol26fKPrdXJc4qSXgv3NxPtX02vUMf0bSjYusJ7djILkUWY10qbouM49Gipm48q5b/DX8CqWkdPQNXlgWqm5t4831/tfiS3Azas2Nk6G3CE3Dm7m14eRXZN+Fq/R6TW++blL2/wWfjr5yfB9E1Um/R2AAbBOAAAAAAAAADDewZH+KL8vGqjOrK9HXN8qhGO0vzIrrPHByZ43pbOtl6ji4a3yLoQ8Fvu3+Bo07VcfVJXV0xa5PrLtRA5Nybcm232t9579By/U9Sqk3tCb5JfY/52M2HyMpWJa0iFW7evw71XCGm16l64lJrm5lQ/mJ/73EgUREyasYqPRJGEY/VGGRfWtJ1LOynco0uKW0IqXVLzJSY2I7qY2x4yPZRUlplf26NqNXzsSb+7s/0JrpdTo0/HrktpRrimvPbqfOqajjaZj+ny58kN0ui3bfgiOZPHeLHf1XDusfjNqK95XpoqxpNp9kLsqpf9MmG5kjfDnE8dXvnRbQqbYx5opS3UkSQuRkpLaJa7I2LlF+gADo7AAAAAAMS7CG8W5XpdQjQn0pj1+1/xsTGx7RbKtt1KOVlWzv3rtlNtqRn/ACMn4uK/SC+xRWn+m07egaPVqNN1l7nGKajFxe3Xv9xw116x6ryJ/ouMsTTaK2vjOPNL7X1M/Bo8ln9L0jmpcme2iDrrjCUnNxSXM+82GEZPoEtFkAwY36gHC42wnmaFa4pudDVq28u32NlYl03QjZXKE1vGS2a8ins/GlhZ1+LJNOqbj9q7n+RRy49SMj5Kv2pm7RM34P1bGyW9oxntL7r6P9S3k9yk3t2MtfhnKlmaHh32b87hs2+/Z7b+w9xJdxOvjbO4HWAQLpqgAAAAAGGt0VzxxpPqed67TH5HIfxkuyM9vf8AuWOzw6tp8NSwLsW1dJx6P6r7mRWw5x0QZNKtrcf0qKuc63vXJxfkztYvFmsY/bkRuXhZBP8ATY5GVRZiZNmPeuWyuXLJGozE5Qfr0YKssrek9EyxePLVssrBjLxdU/c/3JZpGqU6rhxycdNRbacZLqmu4qF+ZavDWD6homPS47WOPPP7z6/wXMe2c976NLBvtsk1J+kbta1OOnYzl0ds+lcfF+P2HAwOJJYuJyXVTut5pPmctl1Zz9Zsyrc+x5sXCa6Rh3Jd2x4TOyM2zyvj60Wp2Pkdy/ijNs/4q6qvwcn7SKa1ZbfmenufNOa6vbbfb/Ue88WqJeijLp0e3sIIX2TmuT2VMpynWa9I0+zVNQqxK90pv48l9GK7WW3Rj149MKqly1wSjGK7kiO8E6R6jp/rNsfl8hJ9e2Me5e8k5uY9fCO32yfDo8cNvtgAFgugAAAAAAPsAAPBm6RgZz5svFqslttzOPX8zj5PBWlW7un01Mv7Z7r2knBw64vtEcqa5/ZELo4Gqqy4WW5krKIvd1+j2b8m9/cTFJJbI+wIQjDo8rphX9Fo8Wo6dj6hS6749foyXbFkSs0LIr1CvFnJKFjahbtunst/wZOj5cUyC/Erte32dSgpEdo4Voj1uybJ+Kikj3VcP6ZBxbxYzceqdjcv1OqjJ3DGqh1E94R/w+Uklsuw+gCc6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+            <div class="easy-crew-item">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAIIAggMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABgcBAwUEAv/EADkQAAICAQIDBAQNBAMAAAAAAAABAgMEBREGEiExQVFhExShwRUiIzJCUnFygZGx0eFVYpPwM0OS/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EACIRAAICAgICAwEBAAAAAAAAAAABAgMEERIxEyEFMkEiUf/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+W0twDO43RCuLeJ7KZvC023lnF/K2x7V5L3kY+G9V/qGR/7K88mMXoo251cJcdbLc3G5Ufw3qv8AUMn/ACM7OhazqWLkxtzMidtEukq5vdrzT7mRvNrT9ivNjZLSTLEBrx7oX1RsqkpQkt00bC2nv2i8AAegAAAAAAAAAAAAEU4y196fD1PEe2VYvjTX/XF+8lZCeOdDstslqmMnLlildBduy+kveRXOXB8SvlOaqfDshHe2+rfeEnKXLGLlJ9El3sb9N+4nPB3DnouTUc+Hyj601tfNX1n5mdXW7HpGHTTK6WkR6Ol26fKPrdXJc4qSXgv3NxPtX02vUMf0bSjYusJ7djILkUWY10qbouM49Gipm48q5b/DX8CqWkdPQNXlgWqm5t4831/tfiS3Azas2Nk6G3CE3Dm7m14eRXZN+Fq/R6TW++blL2/wWfjr5yfB9E1Um/R2AAbBOAAAAAAAAADDewZH+KL8vGqjOrK9HXN8qhGO0vzIrrPHByZ43pbOtl6ji4a3yLoQ8Fvu3+Bo07VcfVJXV0xa5PrLtRA5Nybcm232t9579By/U9Sqk3tCb5JfY/52M2HyMpWJa0iFW7evw71XCGm16l64lJrm5lQ/mJ/73EgUREyasYqPRJGEY/VGGRfWtJ1LOynco0uKW0IqXVLzJSY2I7qY2x4yPZRUlplf26NqNXzsSb+7s/0JrpdTo0/HrktpRrimvPbqfOqajjaZj+ny58kN0ui3bfgiOZPHeLHf1XDusfjNqK95XpoqxpNp9kLsqpf9MmG5kjfDnE8dXvnRbQqbYx5opS3UkSQuRkpLaJa7I2LlF+gADo7AAAAAAMS7CG8W5XpdQjQn0pj1+1/xsTGx7RbKtt1KOVlWzv3rtlNtqRn/ACMn4uK/SC+xRWn+m07egaPVqNN1l7nGKajFxe3Xv9xw116x6ryJ/ouMsTTaK2vjOPNL7X1M/Bo8ln9L0jmpcme2iDrrjCUnNxSXM+82GEZPoEtFkAwY36gHC42wnmaFa4pudDVq28u32NlYl03QjZXKE1vGS2a8ins/GlhZ1+LJNOqbj9q7n+RRy49SMj5Kv2pm7RM34P1bGyW9oxntL7r6P9S3k9yk3t2MtfhnKlmaHh32b87hs2+/Z7b+w9xJdxOvjbO4HWAQLpqgAAAAAGGt0VzxxpPqed67TH5HIfxkuyM9vf8AuWOzw6tp8NSwLsW1dJx6P6r7mRWw5x0QZNKtrcf0qKuc63vXJxfkztYvFmsY/bkRuXhZBP8ATY5GVRZiZNmPeuWyuXLJGozE5Qfr0YKssrek9EyxePLVssrBjLxdU/c/3JZpGqU6rhxycdNRbacZLqmu4qF+ZavDWD6homPS47WOPPP7z6/wXMe2c976NLBvtsk1J+kbta1OOnYzl0ds+lcfF+P2HAwOJJYuJyXVTut5pPmctl1Zz9Zsyrc+x5sXCa6Rh3Jd2x4TOyM2zyvj60Wp2Pkdy/ijNs/4q6qvwcn7SKa1ZbfmenufNOa6vbbfb/Ue88WqJeijLp0e3sIIX2TmuT2VMpynWa9I0+zVNQqxK90pv48l9GK7WW3Rj149MKqly1wSjGK7kiO8E6R6jp/rNsfl8hJ9e2Me5e8k5uY9fCO32yfDo8cNvtgAFgugAAAAAAPsAAPBm6RgZz5svFqslttzOPX8zj5PBWlW7un01Mv7Z7r2knBw64vtEcqa5/ZELo4Gqqy4WW5krKIvd1+j2b8m9/cTFJJbI+wIQjDo8rphX9Fo8Wo6dj6hS6749foyXbFkSs0LIr1CvFnJKFjahbtunst/wZOj5cUyC/Erte32dSgpEdo4Voj1uybJ+Kikj3VcP6ZBxbxYzceqdjcv1OqjJ3DGqh1E94R/w+Uklsuw+gCc6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/Z"
+                    alt="">
+                <h5>Smarter Exchanges</h5>
+                <p>Do it before gifts ship <br>(without guests finding out)</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="footer-signup">
+        <h3>Start your registry today!</h3>
+        <button class="signup">SIGN UP</button>
+
+    </div>
+
+    <div class="footer-text">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sunt vero, ipsa quaerat ex magnam? Omnis recusandae error, magnam asperiores distinctio, ex ea providen laudantium!
+            <!-- <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores numquam cum aspernatur placeat voluptas est, at deleniti fugit in? Cumque dolore modi necessitatibus quis nesciunt veritatis laboriosam rerum inventore maxime!
+             <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nobis. Id natus aliquam fugiat dolorum repudiandae eveniet, aliquid veritatis similique? Harum nisi voluptates eos! Ipsam provident molestiae adipisci accu 
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non, tempore sed, ut quia, distinctio ex possimus atque molestiae quibusdam aliquam quidem nostrum neque temporibus sit nesciunt fugit. -->
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Welcome</h1>
+    <div id="first" class="container">
+        <button id="click" onclick="clicked()">Click Me</button>
+    </div>
+    <div class="container">
+        <p>This is para</p>
+    </div> -->
+</body>
+<!-- <script>
+    // console.log("Hello Developer");
+    // document.write("Document write")
+    // console.warn("Warning")
+    // console.error("error")
+    //console.clear
+    // var b;
+    // console.log(b);
+    // var a = null;
+    // console.log(a);
+    // var arr=[1,2,3,"amit",5];
+    // console.log(arr)
+    //operators in javascript
+
+
+    // var a=5;
+    // var b=8;
+    // console.log(a+b)
+    // var c=b;
+    // console.log(c)
+    // function avg(a,b){
+    //     c = (a+b)/2;
+    //     return c
+    // }
+    // d =  avg(4, 8);
+    // e=  avg(6, 9);
+    // console.log(d, e);
+
+    // console.log('agshdfgvsy')
+
+    // var arr = [1, 2, 3, 8, 5, 6, 7, 78, 9];
+    // console.log(arr.length);
+    // arr.pop();
+    // arr.push(45);
+    // const newlen = arr.unshift(45);
+    // console.log(newlen);
+    // console.log(arr);
+    // for(var i=0; i<arr.length; i++){
+    //     if(i==5){
+    //         continue;
+    //     }
+    //     console.log(arr[i]);
+    // }
+
+    // arr.filter(function(el){
+    //     console.log(el);
+    // })
+    // console.clear
+
+    // let j = 0;
+    // // const ac =0;
+    // // c++;
+    // while(j<arr.length){
+    //     console.log(arr[j]);
+
+    //     j ++;
+    // }
+    // do {
+    //     
+    //     j++;
+    // } while (j < arr.length);
+    // arr.sort();
+    // console.log(arr);
+
+    // console.log(arr[j]);
+
+    // let str = "My name is amit amit ";
+    // console.log(str.length);
+    //  console.log(str.replace("amit","hii"));
+    //  console.log(str);
+    // console.log(str.slice(1,5));
+
+    // let date = new Date();
+    // console.log(date.getTime());
+    // console.log(date.getFullYear());
+    // console.log(date.getSeconds());
+    // console.log(date.getHours());
+    // let el = document.getElementById("click");
+    // console.log(el);
+    // let elem = document.getElementsByClassName("container");
+    // console.log(elem);
+    // elem[0].style.background = "yellow"
+
+
+
+
+    // t = document.getElementsByTagName('div')
+    // console.log(t);
+
+    // create = document.createElement('p');
+
+    // create.innerText = "Created para";
+    // console.log(create);
+    // t[0].append(create);
+
+    // function clicked(){
+        // console.log("Button clicked");
+    // }
+    // window.onload = function(){
+    //     console.log("Document loaded");
+    // }
+
+        //Event in js
+        // event.preventDefault;
+
+
+
+        // first.addEventListener('click', function(){
+            // console.log("click hua");
+        // })
+        
+
+        // first.addEventListener('mouseover', function(){
+            // console.log("mouse on container");
+        // })
+
+        // let preHTML = document.querySelectorAll('.container')[1].innerHTML;
+        // first.addEventListener('mouseup', function(){
+        //     document.querySelectorAll('.container')[1].innerHTML = " <b> We have clicked </b> "
+        //     console.log("mouse up on container");
+        // })
+        
+
+
+
+
+
+
+
+ </script>  -->
+
+</html>
+<script src="Demo.js"></script>
